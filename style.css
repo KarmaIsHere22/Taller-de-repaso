@@ -1,0 +1,165 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    padding: 20px;
+}
+
+header {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+nav ul {
+    list-style: none;
+    margin-top: 10px;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+main {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 900px;
+    margin: 20px auto;
+}
+
+.blog_principal {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    width: 65%;
+}
+
+.Post {
+    background: white;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    flex: 1 1 calc(50% - 15px);
+    min-width: 280px;
+}
+
+.Post h2 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.Registro {
+    width: 30%;
+    background: white;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.Registro h3 {
+    margin-bottom: 20px;
+}
+
+.Registro img {
+    cursor: pointer;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+input {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    background: #008cba;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+button:hover {
+    background: #005f7f;
+}
+.tabla {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 50px;
+}
+
+.tabla h3 {
+    margin-bottom: 10px;
+}
+
+div {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    color: white;
+}
+
+.encabezado {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 5px;
+    color: white;
+    padding: 10px;
+    background-color: #333;
+    text-align: center;
+}
+
+.celda {
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+
+.encabezado, .fila {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5px;
+}
+
+footer {
+    text-align: center;
+    margin-top: 20px;
+    padding: 10px;
+    background: #333;
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .blog_principal {
+        grid-template-columns: 1fr; 
+    }
+
+    
+    .encabezado, .fila {
+        grid-template-columns: repeat(3, minmax(80px, 1fr)); 
+    }
+
+    .celda, .fila input {
+        font-size: 14px; 
+        padding: 8px;
+    }
+}
